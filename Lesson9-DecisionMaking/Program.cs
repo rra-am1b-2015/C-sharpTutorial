@@ -65,9 +65,29 @@ namespace Lesson9_DecisionMaking
 
             Console.WriteLine("Uw BMI bedraagt op dit moment: {0}", bmiRounded.ToString());
 
-            if (bmiRounded < 18.5 )
+            if ( bmiRounded < 18.5 )
             {
                 Console.WriteLine("U heeft een BMI van {0}, U heeft ondergewicht", bmiRounded);
+            }
+            else if ( bmiRounded >= 18.5  &&   bmiRounded < 25 )
+            {
+                Console.WriteLine("U heeft een BMI van {0}, U heeft normaal gewicht", bmiRounded);
+            }
+            else if ( bmiRounded >= 25 && bmiRounded < 27 )
+            {
+                Console.WriteLine("U heeft een BMI van {0}, U heeft licht overgewicht", bmiRounded);
+            }
+            else if ( bmiRounded >= 27 && bmiRounded < 30 )
+            { 
+                Console.WriteLine("U heeft een BMI van {0}, U heeft matig overgewicht", bmiRounded);
+            }
+            else if ( bmiRounded >= 30 && bmiRounded < 40 )
+            {
+                Console.WriteLine("U heeft een BMI van {0}, U heeft ernstig overgewicht", bmiRounded);
+            }
+            else
+            {
+                Console.WriteLine("U heeft een BMI van {0}, U heeft ziekelijk overgewicht", bmiRounded);
             }
 
 
