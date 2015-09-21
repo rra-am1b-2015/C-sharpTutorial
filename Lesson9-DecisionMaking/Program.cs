@@ -13,6 +13,33 @@ namespace Lesson9_DecisionMaking
             // Het winnende getal is 1
             Console.Title = "Lesson 9 Decision Making";
 
+            Console.WriteLine("Keuzemenu:\n" +
+                              "----------\n\n" + 
+                              "- kies A voor het spelen van een raadspelletje.\n" +
+                              "- kies B voor het berekenen van uw BMI (Body Mass Index)\n" +
+                              "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n");
+
+            Console.Write("Geef nu uw keuze: ");
+
+            string keuzeInvoer = Console.ReadLine();
+
+            char gekozenLetter = Convert.ToChar(keuzeInvoer);
+
+            if (//test gekozenLetter)
+            {
+                //Zet hier alle code m.b.t. het raadspelletje
+            }
+            else if (// test gekozenLetter)
+            {
+                // Zet hier alle code voor de BMI Berekening
+
+            }
+            else
+            {
+                // Zeg hier wat je gaat doen als de keuze niet A of B is.
+            }
+
+
             Console.WriteLine("Geef een getal tussen de 1 en de 5.\n" +
                               "U heeft een kans om het goede getal te raden.\n" +
                               "Choose wiseley.........");
@@ -45,7 +72,7 @@ namespace Lesson9_DecisionMaking
 
 
 
-            Console.WriteLine("Dit programma berekent de BMI (Body Mass Index");
+            Console.WriteLine("\n\nDit programma berekent de BMI (Body Mass Index)");
 
             Console.Write("Geef uw lengte in meters: ");
 
