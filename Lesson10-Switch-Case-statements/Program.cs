@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 namespace Lesson10_Switch_Case_statements
 {
 
+
     class Program
     {
         enum mijnKleuren { Onbekend, Pimpelpaars, GeelRood, OranjeBruin };
-
-
+        
         static void Main(string[] args)
         {
+            enum auto { Fiat, Mercedes };
+
             mijnKleuren eigenKleur = mijnKleuren.Onbekend;
 
             Console.Title = "Lesson 10 Switch Case Statements";
@@ -72,6 +74,11 @@ namespace Lesson10_Switch_Case_statements
             // Is de kleur groen, rood, blauw of paarse schrijf naar het scherm
             // Uw lievelingskleur is groen groen, rood, blauw of paarse
 
+
+            // Maak en enum genaamd auto met daarin de volgende merken: Ford, Mercedes, Fiat, Audi, Volkswagen
+            // Maak een variabele autoMerk van het type enum auto.
+            // Geef deze variabele een waarde auto.Fiat
+            // Lees de waarde van autoMerk uit met een switch case. En echo welk merk gekozen is.
             Console.ReadKey();
         }
     }
