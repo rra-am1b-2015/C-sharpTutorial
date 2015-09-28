@@ -75,21 +75,25 @@ namespace Lesson11_While_Loop
             // Telkens als de speler het fout heeft wordt dit gemeld en wordt hem gevaagd om
             // een nieuwe waarde in te voeren. Dit gaat net zo lang door tot het getal geraden is
 
-            int teRadenGetal = 4;
+            Random random = new Random();
+            int teRadenGetal = random.Next(0, 20);
+
             Console.WriteLine("Probeer een getal te raden tussen de 0 en de 20");
             Console.Write("Geef een getal tussen de 0 en 20: ");
             string invoer = Console.ReadLine();
 
             int waardeRaadGetal = Convert.ToInt32(invoer);
+            int teller = 1;
 
             while ( waardeRaadGetal != teRadenGetal )
             {
                 Console.Write("Het getal is niet geraden, geef een nieuw getal: ");
                 invoer = Console.ReadLine();
                 waardeRaadGetal = Convert.ToInt32(invoer);
+                teller++;
             }
-
-            //EindMelding
+            Console.WriteLine("Gefeliciteerd u heeft het getal in {0} keer geraden.\n" + 
+                                "Het was inderdaad {1}.", teller, teRadenGetal);
             
              
 
