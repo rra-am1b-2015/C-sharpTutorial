@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson10-Switch-Case-statem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11-While-Loop", "Lesson11-While-Loop\Lesson11-While-Loop.csproj", "{008B5397-3EBC-4A0E-933C-C22366C72CBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11-Do-While-loop", "Lesson11-Do-While-loop\Lesson11-Do-While-loop.csproj", "{8DC393B5-8BE2-400D-8E19-9F326573C07F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC393B5-8BE2-400D-8E19-9F326573C07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC393B5-8BE2-400D-8E19-9F326573C07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC393B5-8BE2-400D-8E19-9F326573C07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC393B5-8BE2-400D-8E19-9F326573C07F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
