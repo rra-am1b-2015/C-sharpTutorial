@@ -48,7 +48,50 @@ namespace Lesson11_While_Loop
                 //getal -= 4;
             }
 
+            // Schrijf een programma dat vraagt om een onder- en bovengrens en vervolgens de getallen daartussen
+            // Op het scherm schrijft.
 
+            Console.WriteLine("Dit programma vraagt om een ondergrensgetal en een bovengrensgetal.");
+            Console.WriteLine("Daarna worden de getallen tussen ondergrens en bovengrens op het scherm afgebeeld");
+            Console.Write("\nGeef de ondergrens: ");
+
+            string inleeswaarde = Console.ReadLine();
+            int getal1 = Convert.ToInt32(inleeswaarde);
+
+            Console.Write("\nGeef  een bovensgrens: ");
+            inleeswaarde = Console.ReadLine();
+
+            int getal2 = Convert.ToInt32(inleeswaarde);
+
+            getal = getal1;
+
+            while (getal >= getal1 && getal <= getal2)
+            {
+                Console.WriteLine(getal.ToString());
+                getal++;
+            }
+
+            // Maak een programma dat vraagt om een getal te raden tussen de 0 en  20
+            // Telkens als de speler het fout heeft wordt dit gemeld en wordt hem gevaagd om
+            // een nieuwe waarde in te voeren. Dit gaat net zo lang door tot het getal geraden is
+
+            int teRadenGetal = 4;
+            Console.WriteLine("Probeer een getal te raden tussen de 0 en de 20");
+            Console.Write("Geef een getal tussen de 0 en 20: ");
+            string invoer = Console.ReadLine();
+
+            int waardeRaadGetal = Convert.ToInt32(invoer);
+
+            while ( waardeRaadGetal != teRadenGetal )
+            {
+                Console.Write("Het getal is niet geraden, geef een nieuw getal: ");
+                invoer = Console.ReadLine();
+                waardeRaadGetal = Convert.ToInt32(invoer);
+            }
+
+            //EindMelding
+            
+             
 
 
 
