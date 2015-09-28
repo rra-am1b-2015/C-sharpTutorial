@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson-ReadKey", "Lesson-Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson10-Switch-Case-statements", "Lesson10-Switch-Case-statements\Lesson10-Switch-Case-statements.csproj", "{91420210-C490-41CB-A04A-CC06D5ED898B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson11-While-Loop", "Lesson11-While-Loop\Lesson11-While-Loop.csproj", "{008B5397-3EBC-4A0E-933C-C22366C72CBF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{91420210-C490-41CB-A04A-CC06D5ED898B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91420210-C490-41CB-A04A-CC06D5ED898B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91420210-C490-41CB-A04A-CC06D5ED898B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008B5397-3EBC-4A0E-933C-C22366C72CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
