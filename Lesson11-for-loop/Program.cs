@@ -62,14 +62,20 @@ namespace Lesson11_for_loop
 
             int getal = Convert.ToInt32(invoer);
 
-            Console.WriteLine("Hier komt de tafel");
-            for ( int i = 0; i <= 20; i++ )
+            Console.Write("Tot welk getal moet de tafel worden weergegeven: ");
+
+            invoer = Console.ReadLine();
+
+            int aantalTafelRegels = Convert.ToInt32(invoer);
+
+            Console.WriteLine("Hier komt de tafel van {0}", getal);
+            for ( int i = 0; i <= aantalTafelRegels; i++ )
             {
                 long product = i * getal;
                 Console.WriteLine("{0}\tx\t{1} =  {2}", i.ToString(), getal, product);
             }
 
-            // Breidt bovenstaande applica tie uit zodat er ook gevraagd wordt tot hoever de tafel moet weergegeven
+            // Breidt bovenstaande applicatie uit zodat er ook gevraagd wordt tot hoever de tafel moet weergegeven
             // worden.
 
 
