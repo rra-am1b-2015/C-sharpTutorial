@@ -62,15 +62,19 @@ namespace Lesson11_for_loop
 
             int getal = Convert.ToInt32(invoer);
 
-            Console.Write("Tot welk getal moet de tafel worden weergegeven: ");
+            Console.Write("Tot welk getal moet de tafel worden weergegeven : ");
 
             invoer = Console.ReadLine();
 
             int aantalTafelRegels = Convert.ToInt32(invoer);
 
-            Console.WriteLine("Hier komt de tafel van {0}", getal);
+            Console.WriteLine("Hier komt de tafel van {0}. Let op! om bijgeloofredenen wordt de regel met 13 niet uitgevoerd", getal);
             for ( int i = 0; i <= aantalTafelRegels; i++ )
             {
+                if ( i == 13 )
+                {
+                    break;
+                }
                 long product = i * getal;
                 Console.WriteLine("{0}\tx\t{1} =  {2}", i.ToString(), getal, product);
             }
