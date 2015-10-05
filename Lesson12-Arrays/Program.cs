@@ -84,9 +84,29 @@ namespace Lesson12_Arrays
             for ( int i = 0; i < bmi.Length; i++ )
             {
                 bmi[i] = (float)Math.Round(lichaamsgewicht[i] / (lengte * lengte), 1);  // Bereken hier een bmi
-                Console.WriteLine("Ik heb het volgende getal ingevoerd: {0}", bmi[i]);
+                //Console.WriteLine("Ik heb het volgende getal ingevoerd: {0}", bmi[i]);
             }
 
+            // Schrijf naar het scherm:
+            // Mijn gewicht was {0}(maandag) {1}{78} kg, mijn bmi is dan {2} {30}. Mijn lengte is: {3} {1,8}
+
+            float totaalGewicht = 0;
+            float minValue = 800;
+            for (int i = 0; i < bmi.Length; i++)
+            {
+                Console.WriteLine("Mijn gewicht was {0} {1} kg, mijn bmi is dan {2}. Mijn lengte is: {3}",
+                                    dagenVanDeWeek[i], lichaamsgewicht[i], bmi[i], lengte);
+                // Bereken gemiddelde gewicht.
+                totaalGewicht = totaalGewicht + lichaamsgewicht[i];
+
+                if ( lichaamsgewicht[i] < minValue)
+                {
+                    //Wat moet hier gebeuren?
+                }
+
+            }
+            Console.WriteLine("Mijn gemiddelde gewicht deze week was: {0}", totaalGewicht/bmi.Length );
+            Console.WriteLine("Mijn laagste gewicht deze week was: {0}", minValue);
 
             Console.ReadKey();
         }
