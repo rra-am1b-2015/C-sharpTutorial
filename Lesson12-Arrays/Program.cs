@@ -54,22 +54,38 @@ namespace Lesson12_Arrays
 
             for ( int i = 0; i < 7; i = i + 1)
             {
-                Console.WriteLine("Mijn gewicht was {0}: {1}`kg", dagenVanDeWeek[i], lichaamsgewicht[i]);
+                Console.WriteLine("Mijn gewicht was {0}: {1} kg", dagenVanDeWeek[i], lichaamsgewicht[i]);
             }
 
             Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
-
-
-
-
-
-
-
 
             Console.WriteLine("Mijn lichaamsgewicht eergisteren was: {0} kg", lichaamsgewicht2);
             Console.WriteLine("Mijn lichaamsgewicht was gisteren: {0} kg", lichaamsgewicht1);
             Console.WriteLine("Mijn huidige lichaamsgewicht is: {0} kg", lichaamsgewicht0);
 
+            Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+
+            // Schrijf een programma dat vraagt om een lengte in meter.
+            // Gebruik deze ingevoerde lengte en het lichaamsgewicht array om een nieuw
+            // array met de naam BMI te vullen met berekende BMI waarden.
+
+            // BMI = gewicht (kg) / (lengte (m) x lengte (m))
+
+            // Gebruik hiervoor een for-loop
+
+            Console.WriteLine("Geef uw lengte in meters:");
+
+            string invoer = Console.ReadLine();
+
+            float lengte = Convert.ToSingle(invoer);
+
+            float[] bmi = new float[7];
+
+            for ( int i = 0; i < bmi.Length; i++ )
+            {
+                bmi[i] = (float)Math.Round(lichaamsgewicht[i] / (lengte * lengte), 1);  // Bereken hier een bmi
+                Console.WriteLine("Ik heb het volgende getal ingevoerd: {0}", bmi[i]);
+            }
 
 
             Console.ReadKey();
