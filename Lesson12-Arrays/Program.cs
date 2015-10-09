@@ -73,6 +73,8 @@ namespace Lesson12_Arrays
 
             // Gebruik hiervoor een for-loop
 
+            Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
+
             Console.WriteLine("Geef uw lengte in meters:");
 
             string invoer = Console.ReadLine();
@@ -91,7 +93,8 @@ namespace Lesson12_Arrays
             // Mijn gewicht was {0}(maandag) {1}{78} kg, mijn bmi is dan {2} {30}. Mijn lengte is: {3} {1,8}
 
             float totaalGewicht = 0;
-            float minValue = 800;
+            float minValue = Int32.MaxValue;
+            float maxValue = 0;
             for (int i = 0; i < bmi.Length; i++)
             {
                 Console.WriteLine("Mijn gewicht was {0} {1} kg, mijn bmi is dan {2}. Mijn lengte is: {3}",
@@ -101,12 +104,20 @@ namespace Lesson12_Arrays
 
                 if ( lichaamsgewicht[i] < minValue)
                 {
-                    //Wat moet hier gebeuren?
+                    minValue = lichaamsgewicht[i];
+                    Console.WriteLine("Nog lager {0}", minValue);
+                }
+
+                if (lichaamsgewicht[i] > maxValue)
+                {
+                    maxValue = lichaamsgewicht[i];
+                    Console.WriteLine("Nog hoger {0}", minValue);
                 }
 
             }
             Console.WriteLine("Mijn gemiddelde gewicht deze week was: {0}", totaalGewicht/bmi.Length );
             Console.WriteLine("Mijn laagste gewicht deze week was: {0}", minValue);
+            Console.WriteLine("Mijn hoogste gewicht deze week was: {0}", maxValue);
 
             Console.ReadKey();
         }
