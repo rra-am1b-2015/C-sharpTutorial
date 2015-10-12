@@ -55,11 +55,19 @@ namespace Lesson13_Enumerations
             ijsSmaak = ijsSoorten.citroen;
             for ( int i = 0; i < 8; i++)
             {
-                Console.WriteLine("Uw mening over {0}-ijs is: ", ijsSmaak, meningen[i]);
+                Console.WriteLine("Uw mening over {0}-ijs is: {1}", ijsSmaak, meningen[i]);
                 ijsSmaak++;
 
             }
-            
+
+
+            // Maak een enum die verschillende koffiedranken bevat zoals: cappucino, 
+            // espresso, koffie, latte machiato, koffie verkeerd, dubbele espresso, longo
+            // Schrijf een programma dat vraagt om een voornaam. Sla dit op in een array voornaam.
+            // Vraag daarna watvoor soort koffie deze persoon wil hebben. Maak ook een enum metOfZonderSlagroom. Deze
+            // heeft de waarde { met, zonder }. Vraag ook of deze persoon met of zonder slagroom wil en sla dit op
+            // In een array slagroom. Daarna voor elke persoon weer welke koffie hij/zij wil en met of zonder slagroom
+            // Dit alles voor 10 personen.
 
 
 
