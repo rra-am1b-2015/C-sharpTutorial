@@ -38,6 +38,8 @@ namespace Lesson13_Enumerations
 
             Console.Clear();
             ijsSmaak = ijsSoorten.citroen;
+            string[] meningen = new string[8];
+
             Console.WriteLine("Geef uw mening over de onderstaande ijssmaken\n" + 
                               "druk op een willekeurige toets om verder te gaan...");
             Console.ReadKey();
@@ -45,7 +47,17 @@ namespace Lesson13_Enumerations
             for ( int i = 0; i < 8; i++)
             {
                 Console.WriteLine("Geef uw mening over de ijssoort {0}:", ijsSmaak);
+                string invoer = Console.ReadLine();
+                meningen[i] = invoer;
                 ijsSmaak++;
+            }
+
+            ijsSmaak = ijsSoorten.citroen;
+            for ( int i = 0; i < 8; i++)
+            {
+                Console.WriteLine("Uw mening over {0}-ijs is: ", ijsSmaak, meningen[i]);
+                ijsSmaak++;
+
             }
             
 
