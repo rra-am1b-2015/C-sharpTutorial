@@ -119,6 +119,57 @@ namespace Lesson12_Arrays
             Console.WriteLine("Mijn laagste gewicht deze week was: {0}", minValue);
             Console.WriteLine("Mijn hoogste gewicht deze week was: {0}", maxValue);
 
+
+            Console.WriteLine("\n========================== Foreach-loop===========================================\n");
+
+            // Maak een array die double's kan opslaan. Stop een vijftal double waarde in het array
+
+            double[] kommaGetallen;
+            kommaGetallen = new double[5];
+
+            double startWaarde = 4.23459d;
+            for ( int i = 0; i < kommaGetallen.Length; i++)
+            {
+                kommaGetallen[i] = startWaarde + i * 1203.54678;
+            }
+
+            for (int i = 0; i < kommaGetallen.Length; i++)
+            {
+                Console.WriteLine("{0}", kommaGetallen[i]);
+            }
+
+            foreach (double test in kommaGetallen)
+            {
+                Console.WriteLine("Deze waarde wordt u aangeboden door een foreac-loop: {0}", test);
+            }
+
+
+            // Beeld de inhoud van het array bmi naar het scherm
+            // Doe dat ook voor lichaamsgewicht
+
+            foreach (float bmi_waarde in bmi)
+            {
+                Console.WriteLine("Mijn bmi is: {0}", bmi_waarde);
+            }
+
+            foreach ( float gewicht in lichaamsgewicht)
+            {
+                Console.WriteLine("Mijn gewicht is: {0}", gewicht);
+            }
+
+            string zin = "Ik ben zo blij dat het over een uur weekend is. Volgende week is de laatste week voor de vakantie begint";
+
+            foreach ( char letter in zin)
+            {
+                Console.WriteLine("{0}", letter.ToString());
+            }
+
+            foreach ( string argument in args)
+            {
+                Console.WriteLine("De commandline argumenten: {0}", argument);
+            }
+            
+
             Console.ReadKey();
         }
     }
