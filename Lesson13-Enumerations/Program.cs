@@ -80,6 +80,7 @@ namespace Lesson13_Enumerations
             Console.WriteLine("Dit programma is ontwikkeld voor kelners met een slecht geheugen. Vraag om een voornaam\n" +
                                 "koffiedrank en of de persoon die bestelt slagroom wil.\n" + 
                                 "druk op de een toets om verder te gaan...");
+            Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
             string[] voornaam = new string[10];
             koffiedranken[] drankje = new koffiedranken[10];
             slagroom[] room = new slagroom[10];
@@ -88,9 +89,10 @@ namespace Lesson13_Enumerations
             slagroom keuze = slagroom.met;
 
             Console.ReadKey();
-            int m = 1;
+            int m = 0;
             do
             {
+                
                 Console.Write("Geef uw voornaam: ");
                 string invoer = Console.ReadLine();
                 string naam = invoer;
@@ -98,7 +100,7 @@ namespace Lesson13_Enumerations
                 
                 voornaam[m] = naam;
                 
-                Console.WriteLine("Welke koffie wilt u: ");
+                Console.WriteLine("\nWelke koffie wilt u: ");
 
                 
 
@@ -107,7 +109,9 @@ namespace Lesson13_Enumerations
                     Console.WriteLine("{0} {1}", k, koffie);
                     koffie++;
                 }
-                Console.WriteLine("Maak uw keuze door het invoeren van een nummer: ");
+                koffie = koffiedranken.cappucino;
+
+                Console.Write("Maak uw keuze door het invoeren van een nummer: ");
                 invoer = Console.ReadLine();
                 int getal = Convert.ToInt32(invoer);
                 switch (getal)
@@ -137,13 +141,14 @@ namespace Lesson13_Enumerations
                         break;
                 }
 
-                Console.WriteLine("Wilt u slagroom? \n" +
-                                    "kies een nummer:");
+                Console.WriteLine("\nWilt u met of zonder slagroom?");
                 for (int j = 1; j < 3; j++)
                 {
                     Console.WriteLine("{0} {1}", j, keuze);
                     keuze++;
                 }
+                keuze = slagroom.met;
+                Console.Write("kies een nummer: ");
                 invoer = Console.ReadLine();
                 getal = Convert.ToInt32(invoer);
                 switch (getal)
@@ -158,8 +163,20 @@ namespace Lesson13_Enumerations
                         break;
                 }
                 m++;
-            } while(true);
+                Console.WriteLine("\n------------------------------------------------------------------------------\n");
+            } while(m < 2);
 
+            Console.WriteLine("\nMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM\n");
+
+            for ( int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("De persoon met voornaam {0} heeft de drank {1} gekozen {2} slagroom", voornaam[i], drankje[i], room[i]);
+                if (i == (m -1))
+                {
+                    break;
+                }
+                  
+            }
             Console.ReadKey();
         }
     }
