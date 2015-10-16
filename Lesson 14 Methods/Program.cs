@@ -23,13 +23,16 @@ namespace Lesson_14_Methods
 
             // Maak een method die twee string argumenten heeft en deze aan elkaar plakt.
 
-            Console.WriteLine("Dit is de aan elkaar geplakte string: {0}", plakString("Hallo", "en dag"));
+            Console.WriteLine("Dit is de aan elkaar geplakte string: {0}", plakString("Hallo", " en dag"));
 
+            // Maak een method die twee getallen (integer getallen) bij elkaar optelt. Zorg voor de veiligheid dat de som van het type long is.
+            int getal1 = 12;
+            int getal2 = 34;
+
+            Console.WriteLine("De som van {0} + {1} = {2}", getal1, getal2, optellen(getal1 , getal2));
 
             Console.ReadKey();
         }
-
-
 
         static void groeten(int aantal, string geslacht, string naam)
         {
@@ -42,6 +45,10 @@ namespace Lesson_14_Methods
             return nieuweString;
         }
 
-
+        static long optellen(int getal1, int getal2)
+        {
+            long som = getal1 + getal2;
+            return som;
+        }
     }
 }
