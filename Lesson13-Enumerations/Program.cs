@@ -25,7 +25,6 @@ namespace Lesson13_Enumerations
             //string ijsSoorten = "gemalen bladluis";
 
             ijsSoorten ijsSmaak;
-            koffiedranken koffie = koffiedranken.cappucino;
 
             ijsSmaak = ijsSoorten.citroen;
 
@@ -85,16 +84,27 @@ namespace Lesson13_Enumerations
             koffiedranken[] drankje = new koffiedranken[10];
             slagroom[] room = new slagroom[10];
 
+            koffiedranken koffie = koffiedranken.cappucino;
+            slagroom keuze = slagroom.met;
+
             Console.ReadKey();
+            int m = 1;
             do
             {
                 Console.Write("Geef uw voornaam: ");
                 string invoer = Console.ReadLine();
                 string naam = invoer;
+
+                
+                voornaam[m] = naam;
+                
                 Console.WriteLine("Welke koffie wilt u: ");
-                for (int i = 1; i < 8; i++ )
+
+                
+
+                for (int k = 1; k < 8; k++ )
                 {
-                    Console.WriteLine("{0} {1}", i, koffie);
+                    Console.WriteLine("{0} {1}", k, koffie);
                     koffie++;
                 }
                 Console.WriteLine("Maak uw keuze door het invoeren van een nummer: ");
@@ -103,12 +113,51 @@ namespace Lesson13_Enumerations
                 switch (getal)
                 {
                     case 1:
-
-
+                       drankje[m] = koffiedranken.cappucino;
+                    break;
+                    case 2:
+                        drankje[m] = koffiedranken.dubbeleespresso;
+                        break;
+                    case 3:
+                        drankje[m] = koffiedranken.espresso;
+                        break;
+                    case 4:
+                        drankje[m] = koffiedranken.koffie;
+                        break;
+                    case 5:
+                        drankje[m] = koffiedranken.koffieverkeerd;
+                        break;
+                    case 6:
+                        drankje[m] = koffiedranken.lattemachiato;
+                        break;
+                    case 7:
+                        drankje[m] = koffiedranken.lungo;
+                        break;
+                    default:
+                        break;
                 }
 
-
-
+                Console.WriteLine("Wilt u slagroom? \n" +
+                                    "kies een nummer:");
+                for (int j = 1; j < 3; j++)
+                {
+                    Console.WriteLine("{0} {1}", j, keuze);
+                    keuze++;
+                }
+                invoer = Console.ReadLine();
+                getal = Convert.ToInt32(invoer);
+                switch (getal)
+                {
+                    case 1:
+                        room[m] = slagroom.met;
+                        break;
+                    case 2:
+                        room[m] = slagroom.zonder;
+                        break;
+                    default:
+                        break;
+                }
+                m++;
             } while(true);
 
             Console.ReadKey();
