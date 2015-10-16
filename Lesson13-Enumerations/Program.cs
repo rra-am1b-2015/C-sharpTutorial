@@ -11,15 +11,21 @@ namespace Lesson13_Enumerations
     class Program
     {
         enum ijsSoorten { aardbei = 3, chocolade = 2, citroen = 0, malaga = 1, meloen = 6, stracciatella = 5, mango = 7, perzik = 4 };
+        enum koffiedranken { cappucino, espresso, koffie, lattemachiato, koffieverkeerd, dubbeleespresso, lungo };
+        enum slagroom { met, zonder};
 
         static void Main(string[] args)
         {
             Console.Title = "Enumerations";
 
+
+            
+
+
             //string ijsSoorten = "gemalen bladluis";
 
             ijsSoorten ijsSmaak;
-           
+            koffiedranken koffie = koffiedranken.cappucino;
 
             ijsSmaak = ijsSoorten.citroen;
 
@@ -40,6 +46,7 @@ namespace Lesson13_Enumerations
             ijsSmaak = ijsSoorten.citroen;
             string[] meningen = new string[8];
 
+            /*
             Console.WriteLine("Geef uw mening over de onderstaande ijssmaken\n" + 
                               "druk op een willekeurige toets om verder te gaan...");
             Console.ReadKey();
@@ -59,7 +66,7 @@ namespace Lesson13_Enumerations
                 ijsSmaak++;
 
             }
-
+            */
 
             // Maak een enum die verschillende koffiedranken bevat zoals: cappucino, 
             // espresso, koffie, latte machiato, koffie verkeerd, dubbele espresso, longo
@@ -69,7 +76,40 @@ namespace Lesson13_Enumerations
             // In een array slagroom. Daarna voor elke persoon weer welke koffie hij/zij wil en met of zonder slagroom
             // Dit alles voor 10 personen.
 
+            Console.WriteLine("\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n");
 
+            Console.WriteLine("Dit programma is ontwikkeld voor kelners met een slecht geheugen. Vraag om een voornaam\n" +
+                                "koffiedrank en of de persoon die bestelt slagroom wil.\n" + 
+                                "druk op de een toets om verder te gaan...");
+            string[] voornaam = new string[10];
+            koffiedranken[] drankje = new koffiedranken[10];
+            slagroom[] room = new slagroom[10];
+
+            Console.ReadKey();
+            do
+            {
+                Console.Write("Geef uw voornaam: ");
+                string invoer = Console.ReadLine();
+                string naam = invoer;
+                Console.WriteLine("Welke koffie wilt u: ");
+                for (int i = 1; i < 8; i++ )
+                {
+                    Console.WriteLine("{0} {1}", i, koffie);
+                    koffie++;
+                }
+                Console.WriteLine("Maak uw keuze door het invoeren van een nummer: ");
+                invoer = Console.ReadLine();
+                int getal = Convert.ToInt32(invoer);
+                switch (getal)
+                {
+                    case 1:
+
+
+                }
+
+
+
+            } while(true);
 
             Console.ReadKey();
         }
