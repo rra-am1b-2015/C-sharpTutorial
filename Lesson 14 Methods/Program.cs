@@ -33,6 +33,12 @@ namespace Lesson_14_Methods
 
             Console.WriteLine("Het product van {0} x {1} = {2}", getal1, getal2, vermenigvuldigen(getal1, getal2));
 
+            float getal3 = 3.14f;
+            float getal4 = 3.24f;
+
+            Console.WriteLine("Het quotient van {0} x {1} = {2}", getal3, getal4, delen(getal3, getal4));
+            Console.WriteLine("De modulus van {0} x {1} = {2}", getal1, getal2, modulus(getal1, getal2));
+            Console.WriteLine("Het verschil van {0} x {1} = {2}", getal1, getal2, aftrekken(getal1, getal2));
             Console.ReadKey();
         }
 
@@ -58,7 +64,44 @@ namespace Lesson_14_Methods
             float product = getal1 * getal2;
             return product;
         }
+
+        // Maak een method die twee integer getallen deelt en waarvan de uitkomst een double is.
+        // Maak een method die de modulus berekent van twee integer getallen.
+        // Maak een method die twee integer getallen van elkaar aftrekt en als uitkomst een getal van het type long heeft.
+        // Maak een method die vraagt om 5 getallen. Na het het laatste getal zet de method de ingevoerde waarden aflopend achter elkaar, komma gescheiden. 
+        // Tip gebruik een bestaande array method voor het sorteren.
         
+        static double delen(int getal1,  int getal2)
+        {
+            double quotient = getal1 / getal2;
+            return quotient;
+        }
+
+        static double delen(float getal1, float getal2)
+        {
+            double quotient = getal1 / getal2;
+            return quotient;
+        }
+
+        static float delen(float getal1, int getal2)
+        {
+            float quotient = getal1 / getal2;
+            return quotient;
+        }
+
+        static int modulus(int getal1, int getal2)
+        {
+            int mod = getal1 % getal2;
+            return mod;
+        }
+
+        static long aftrekken(int getal1, int getal2)
+        {
+            Int64 verschil = getal1 - getal2;
+            return verschil;
+        }
+
+
 
     }
 }
