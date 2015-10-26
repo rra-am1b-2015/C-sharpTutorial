@@ -39,6 +39,8 @@ namespace Lesson_14_Methods
             Console.WriteLine("Het quotient van {0} x {1} = {2}", getal3, getal4, delen(getal3, getal4));
             Console.WriteLine("De modulus van {0} x {1} = {2}", getal1, getal2, modulus(getal1, getal2));
             Console.WriteLine("Het verschil van {0} x {1} = {2}", getal1, getal2, aftrekken(getal1, getal2));
+
+            Console.WriteLine("{0}", sorteerGetallen());
             Console.ReadKey();
         }
 
@@ -102,6 +104,27 @@ namespace Lesson_14_Methods
         }
 
 
+        static string sorteerGetallen()
+        {
+            Console.WriteLine("Deze app vraagt om 5 getallen en zet deze in aflopende volgorde op het scherm");
 
+            int teller = 0;
+            int[] getallen = new int[5];
+            while (teller < 5)
+            {
+                Console.Write("Geef getal nr: {0} => ", teller);
+                string invoer = Console.ReadLine();
+                getallen[teller] = Convert.ToInt32(invoer);
+                teller++;
+            }
+            Array.Sort(getallen);
+            Array.Reverse(getallen);
+            string aflopend = "";
+            for (int i = 0; i < 5; i++)
+            {
+                aflopend += getallen[i] + " ";
+            }
+            return "De getallen in aflopende volgorde zijn: " + aflopend;
+        }
     }
 }
