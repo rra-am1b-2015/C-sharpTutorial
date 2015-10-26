@@ -31,6 +31,8 @@ namespace Lesson_14_Methods
 
             Console.WriteLine("De som van {0} + {1} = {2}", getal1, getal2, optellen(getal1 , getal2));
 
+            Console.WriteLine("Het product van {0} x {1} = {2}", getal1, getal2, vermenigvuldigen(getal1, getal2));
+
             Console.ReadKey();
         }
 
@@ -50,5 +52,13 @@ namespace Lesson_14_Methods
             long som = getal1 + getal2;
             return som;
         }
+
+        static float vermenigvuldigen(int getal1, int getal2)
+        {
+            float product = getal1 * getal2;
+            return product;
+        }
+        
+
     }
 }
