@@ -41,6 +41,12 @@ namespace Lesson_14_Methods
             Console.WriteLine("Het verschil van {0} x {1} = {2}", getal1, getal2, aftrekken(getal1, getal2));
 
             Console.WriteLine("{0}", sorteerGetallen());
+
+            int[] test = new int[6] { 34, 23, 1, 23,1,2};
+
+            Console.WriteLine("{0}", optellen(test));
+            Console.WriteLine("{0}", berekenJeLeeftijd(Convert.ToDateTime("26-10-2015")));
+            Convert.ToDateTime("26-10-2015 15:02:12");
             Console.ReadKey();
         }
 
@@ -58,6 +64,16 @@ namespace Lesson_14_Methods
         static long optellen(int getal1, int getal2)
         {
             long som = getal1 + getal2;
+            return som;
+        }
+
+        static long optellen(params int[] rijGetallen)
+        {
+            int som = 0;
+            for (int i = 0; i < rijGetallen.Length; i++)
+            {
+                som += rijGetallen[i];
+            }
             return som;
         }
 
@@ -125,6 +141,15 @@ namespace Lesson_14_Methods
                 aflopend += getallen[i] + " ";
             }
             return "De getallen in aflopende volgorde zijn: " + aflopend;
+        }
+
+        // Maak een method die vraagt om je geboortedatum en dan je leeftijd teruggeeft.
+        static int berekenJeLeeftijd(DateTime datum)
+        {
+            DateTime nu = DateTime.Now;
+            TimeSpan result = datum.Subtract(nu);
+            Console.WriteLine("{0}", result);
+            return 0;
         }
     }
 }
