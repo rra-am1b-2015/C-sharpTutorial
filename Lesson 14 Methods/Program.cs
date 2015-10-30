@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lesson_14_Methods
 {
+
+
     class Program
     {
         static void Main(string[] args)
@@ -45,8 +47,7 @@ namespace Lesson_14_Methods
             int[] test = new int[6] { 34, 23, 1, 23,1,2};
 
             Console.WriteLine("{0}", optellen(test));
-            Console.WriteLine("{0}", berekenJeLeeftijd(Convert.ToDateTime("26-10-2015")));
-            Convert.ToDateTime("26-10-2015 15:02:12");
+            
             Console.ReadKey();
         }
 
@@ -144,12 +145,6 @@ namespace Lesson_14_Methods
         }
 
         // Maak een method die vraagt om je geboortedatum en dan je leeftijd teruggeeft.
-        static int berekenJeLeeftijd(DateTime datum)
-        {
-            DateTime nu = DateTime.Now;
-            TimeSpan result = datum.Subtract(nu);
-            Console.WriteLine("{0}", result);
-            return 0;
-        }
+        
     }
 }
