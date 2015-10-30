@@ -12,7 +12,9 @@ namespace Lesson16_ClassesPart2
         {
             Console.Title = "Lesson 16 Classes Part 2";
             Begroeting zegHallo;
-            zegHallo = new Begroeting("Fransje");
+            zegHallo = new Begroeting("Fransje",123);
+            zegHallo.Leeftijd = 23;
+            zegHallo.Naam = "Frans";
             zegHallo.gegroet();
 
             // Maak verschillende Begroeting objecten (instanties) die verschillende personen begroeten.

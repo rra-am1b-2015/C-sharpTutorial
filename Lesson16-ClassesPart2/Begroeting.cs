@@ -9,8 +9,19 @@ namespace Lesson16_ClassesPart2
     class Begroeting
     {
         //Fields
-        string naam = "Bertje";
-        int leeftijd = 16;
+        private string naam = "Bertje";
+        private int leeftijd = 16;
+
+        //Properties
+        public int Leeftijd
+        {
+            set { this.leeftijd = value; }
+        }
+
+        public string Naam
+        {
+            set { this.naam = value; }
+        }
 
         //Constructor
         public Begroeting()
@@ -20,6 +31,12 @@ namespace Lesson16_ClassesPart2
         public Begroeting(string naam)
         {
             this.naam = naam;
+        }
+
+        public Begroeting(string naam, int leeftijd)
+        {
+            this.naam = naam;
+            this.leeftijd = leeftijd;
         }
 
         // Methods
