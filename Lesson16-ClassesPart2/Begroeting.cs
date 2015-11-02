@@ -9,8 +9,8 @@ namespace Lesson16_ClassesPart2
     class Begroeting
     {
         //Fields
-        private string naam = "Bertje";
-        private int leeftijd = 16;
+        private string naam = "geenNaam";
+        private int leeftijd = 0;
 
         //Properties
         public int Leeftijd
