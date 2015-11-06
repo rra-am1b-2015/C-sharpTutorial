@@ -17,14 +17,12 @@ namespace Lesson16_ClassesPart4
             // Maak een object van deze class
 
             Auto voertuig = new Auto("Mercedes", "SLK", 3, color.Pimpelpurple, 3.6f);
-
             /*
             voertuig.CarBrand = "Volkswagen";
             voertuig.Type = "Rampo";
             voertuig.AmountOfDoors = 3;
-            */
-
-            // int[] getallen = new int[4] { new Auto("Mercedes", "SLK", 3, color.Pimpelpurple, 3.6f), 2,4,5};
+            */            
+            voertuig.ShowCarProperties();
 
             Auto[] voertuigen = new Auto[5]
             {
@@ -35,16 +33,11 @@ namespace Lesson16_ClassesPart4
                 new Auto("Toyota", "Corolla", 1, color.Pimpelpurple, 8.5f)
             };            
 
-            voertuig.ShowCarProperties();
+            
 
             for (int i = 0; i < voertuigen.Length; i++)
             {
                 voertuigen[i].ShowCarProperties();
-            }
-
-            foreach (Auto auto in voertuigen)
-            {
-                auto.ShowCarProperties();
             }
 
             Console.ReadKey();
