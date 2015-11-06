@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lesson16_ClassesPart4
 {
+    enum color { Pimpelpurple, sharlakred, Marshmellowyellow};
+
     class Program
     {
         static void Main(string[] args)
@@ -14,11 +16,15 @@ namespace Lesson16_ClassesPart4
 
             // Maak een object van deze class
 
-            Auto voertuig = new Auto();
+            Auto voertuig = new Auto("Mercedes", "SLK", 3, color.Pimpelpurple, 3.6f);
 
+            /*
             voertuig.CarBrand = "Volkswagen";
+            voertuig.Type = "Rampo";
+            voertuig.AmountOfDoors = 3;
+            */
 
-            Console.WriteLine("{0}", voertuig.CarBrand);
+            voertuig.ShowCarProperties();
 
             Console.ReadKey();
         }
