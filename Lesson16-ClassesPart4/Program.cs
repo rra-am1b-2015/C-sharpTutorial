@@ -24,7 +24,28 @@ namespace Lesson16_ClassesPart4
             voertuig.AmountOfDoors = 3;
             */
 
+            // int[] getallen = new int[4] { new Auto("Mercedes", "SLK", 3, color.Pimpelpurple, 3.6f), 2,4,5};
+
+            Auto[] voertuigen = new Auto[5]
+            {
+                new Auto("Daf", "electric", 6, color.sharlakred, 2f),
+                new Auto("Fiat", "500", 3, color.Pimpelpurple, 2.4f),
+                new Auto("Mercedes", "SLK", 4, color.Marshmellowyellow, 5f),
+                new Auto("BMW", "Z8", 2, color.Marshmellowyellow, 2.6f),
+                new Auto("Toyota", "Corolla", 1, color.Pimpelpurple, 8.5f)
+            };            
+
             voertuig.ShowCarProperties();
+
+            for (int i = 0; i < voertuigen.Length; i++)
+            {
+                voertuigen[i].ShowCarProperties();
+            }
+
+            foreach (Auto auto in voertuigen)
+            {
+                auto.ShowCarProperties();
+            }
 
             Console.ReadKey();
         }
