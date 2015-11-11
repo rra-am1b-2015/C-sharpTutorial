@@ -28,7 +28,7 @@ namespace Lesson16_ClassesPart5
 
             for (int i = 0; i < mobieltjes.Length; i++)
             {
-                //Console.WriteLine(mobieltjes[i].ShowSmartphoneInfoText());
+                Console.WriteLine(mobieltjes[i].ShowSmartphoneInfoText());
             }
 
             foreach (Smartphone mobile in mobieltjes)
